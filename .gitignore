@@ -1,0 +1,26 @@
+# Ignore all files env file and venv directory.
+.env
+venv/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Data files
+data/*.csv
+data/*.json
+data/*.xlsx
+
+
+# API Keys and sensitive data
+config.ini
+secrets.json
+*.key
+*.pem
+
+# Jupyter Notebook
+.ipynb_checkpoints

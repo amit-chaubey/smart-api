@@ -2,7 +2,7 @@ import requests
 
 # Make an API call and store the response 
 
-url = 'https://api.github.com/search/repositories?q=language:python+sort:stars'
+url = 'https://api.github.com/search/repositories?q=language:sql+sort:stars'
 
 headers = {
     "Accept": "application/vnd.github.v3+json"
@@ -38,3 +38,11 @@ print(f"Repository: {repo_dict['html_url']}")
 print(f"Created: {repo_dict['created_at']}")
 print(f"Updated: {repo_dict['updated_at']}")
 print(f"Description: {repo_dict['description']}")
+
+# Summarize the top repositories
+print("\nSelected information about each repository:")
+for repo_dict in repo_dicts:
+    print(f"\nName: {repo_dict['name']})")
+    print(f"Owner: {repo_dict['owner']['login']}")
+    print(f"Repo:{repo_dict['html_url']}")
+    print(f"Description: {repo_dict['description']}")
